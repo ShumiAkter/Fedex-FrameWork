@@ -14,7 +14,6 @@ public class HomePage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);// PageFactory help to instaniate webelements
 	}
-
 	// 1st way: Most common way to write the webElement (@FindBy)
 	// Use of 'ClassName' attribute as locator
 	@FindBy(className = "fxg-user-options__sign-in-text")
@@ -30,21 +29,19 @@ public class HomePage {
 	@FindBy(how = How.XPATH, using = "//img[@class='fxg-header__logo']")
 	WebElement logo;
 
+	
 	public void clickLoginButton() throws InterruptedException {
 		loginButton.click();
 		Thread.sleep(4000);
 	}
-
 	public void clicktrackSearchButton() throws InterruptedException {
 		trackSearchButton.click();
 		Thread.sleep(5000);
 	}
-
 	public void clickTrackingID() throws InterruptedException {
 		trackingID.click();
 		Thread.sleep(4000);
 	}
-
 	public void clickLgo() throws InterruptedException {
 		logo.click();
 		Thread.sleep(2000);
